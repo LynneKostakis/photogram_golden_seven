@@ -5,7 +5,7 @@ class PicturesController < ApplicationController
   end   
   
   def process_create
-      @pic_count = Photo.all
+      @pic_count = Photo.count
       
       render("pic_template/new_results_template.html.erb")
   end 

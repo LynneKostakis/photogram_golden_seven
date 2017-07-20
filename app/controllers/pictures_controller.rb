@@ -13,10 +13,30 @@ class PicturesController < ApplicationController
   
   def create_row
       
+      p = Photo.new
+      p.source = params["the source"]
+      p.caption = params["the caption"]
+      
       render("pic_template/create_row_template.html.erb")
   end  
   
+  def index
      
+     #p.all = Photo.all
+    # @pic_all = [p.all]
+     
+     render("pic_template/index.html.erb")
+  end   
+  
+  def edit_form
+      
+      render("pic_template/edit_form_template.html.erb")
+  end 
+  
+  def update_row
+      
+      render("pic_template/update_row_template.html.erb")
+  end 
   
   def show
      

@@ -14,10 +14,7 @@ class PicturesController < ApplicationController
   
   def process_create
 
-      @pic_count = Photo.count
-
-      
-      render("pic_template/new_results_template.html.erb")
+    redirect_to("/photos")
   end 
   
   

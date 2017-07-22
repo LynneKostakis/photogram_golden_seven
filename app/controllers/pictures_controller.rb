@@ -1,11 +1,21 @@
 class PicturesController < ApplicationController
   def new_form
+    
+    p = Photo.new
+    p.source = params["the source"]
+    p.caption = params["the caption"]
+    p.save
+
+
+     
       
       render("pic_template/new_form_template.html.erb")
   end   
   
   def process_create
+
       @pic_count = Photo.count
+
       
       render("pic_template/new_results_template.html.erb")
   end 

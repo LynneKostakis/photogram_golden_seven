@@ -1,0 +1,35 @@
+
+<h1> All Photos</h1>
+
+<p>
+  <a href= "https://photogram-lynnekostakis.c9users.io/photos/new"> Add a new photo  </a>  
+   
+</p>
+
+
+
+
+<ul>
+  <% @photos.each do |the_photo| %>
+ 
+   <img src= "<%= the_photo.source %>">
+
+  <br>
+  <form action="/photos/:an_id">
+  <type = submit> 
+  <button><a href= "https://photogram-lynnekostakis.c9users.io/photos/:an_id"></a> Show Details</button>
+  </form>
+  <br>
+  <type = submit> 
+  <button>Edit</button>
+  <br>
+  <type = submit> 
+  <button>Delete</button>
+  <br>
+    
+  <% end %>
+</ul>
+
+
+
+

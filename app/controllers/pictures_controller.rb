@@ -28,9 +28,11 @@ class PicturesController < ApplicationController
   end  
   
   def index
-     
-     #p.all = Photo.all
-    # @pic_all = [p.all]
+      @photos = Photo.all
+      p = Photo.new
+      p.source = params["the source"]
+
+      
      
      render("pic_template/index.html.erb")
   end   

@@ -12,11 +12,15 @@
 <ul>
   <% @photos.each do |the_photo| %>
  
-    <li><img src= "<%= the_photo %>></li>
+   <img src= "<%= the_photo.source %>">
 
+  <br>
   <button>Show Details</button>
+  <br>
   <button>Edit</button>
-  <button>Delete</button>   
+  <br>
+  <button>Delete</button>
+  <br>
     
   <% end %>
 </ul>

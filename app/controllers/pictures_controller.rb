@@ -44,12 +44,13 @@ class PicturesController < ApplicationController
     p.caption = params["the caption"]
     p.save
       
-      render("pic_template/edit_form_template.html.erb")
+    render("pic_template/edit_form_template.html.erb")
+
   end 
   
   def update_row
       
-      render("pic_template/update_row_template.html.erb")
+      redirect_to("/photos/:an_id")
   end 
   
   def show

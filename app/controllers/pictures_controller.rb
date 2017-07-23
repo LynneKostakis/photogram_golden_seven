@@ -49,7 +49,7 @@ class PicturesController < ApplicationController
   
   def show
      
-     @pic = Photo.find(params["an_id"])
+     @pic = Photo.find(params[:an_id])
     
      
      

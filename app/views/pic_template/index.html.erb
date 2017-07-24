@@ -7,25 +7,24 @@
 </p>
 
 
-
-
 <ul>
   <% @photos.each do |the_photo| %>
  
    <img src= "<%= the_photo.source %>">
+   
 
-  <br>
-  <form action="/photos/:an_id">
-  <type = submit> 
-  <button><a href= "https://photogram-lynnekostakis.c9users.io/photos/#{photo.id}"></a> Show Details</button>
-  </form>
-  <br>
-  <type = submit> 
+
+  <br/>
+
+ <button> Show Details</button>
+
+  <br/>
+
   <button>Edit</button>
-  <br>
-  <type = submit> 
+  <br/>
+
   <button>Delete</button>
-  <br>
+  <br/>
     
   <% end %>
 </ul>

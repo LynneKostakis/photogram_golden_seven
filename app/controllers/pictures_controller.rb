@@ -13,6 +13,7 @@ class PicturesController < ApplicationController
   end   
   
   def process_create
+    
 
     redirect_to("/photos")
   end 
@@ -23,6 +24,7 @@ class PicturesController < ApplicationController
       p = Photo.new
       p.source = params["the source"]
       p.caption = params["the caption"]
+      p.save
       
       render("pic_template/create_row_template.html.erb")
   end  
@@ -30,8 +32,9 @@ class PicturesController < ApplicationController
   def index
       @photos = Photo.all
       p = Photo.new
+      p.id = params["the id"]
       p.source = params["the source"]
-
+      p.save
       
      
      render("pic_template/index.html.erb")

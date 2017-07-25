@@ -1,11 +1,7 @@
 class PicturesController < ApplicationController
   def new_form
     
-    p = Photo.new
-    p.source = params["the_source"]
-    p.caption = params["the_caption"]
-
-    p.save
+    
 
 
      
@@ -23,15 +19,7 @@ class PicturesController < ApplicationController
   end 
   
   
-  def create_row
-      
-      p = Photo.new
-      p.source = params["the_source"]
-      p.caption = params["the_caption"]
-      p.save
-      
-      render("pic_template/create_row_template.html.erb")
-  end  
+
   
   def index
       @photos = Photo.order(created_at: :desc)

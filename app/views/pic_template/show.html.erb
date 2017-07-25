@@ -1,0 +1,22 @@
+<h1> Photo Details</h1>
+
+<p>
+    
+    <%= @pic.caption %>
+</p>
+
+<img src= "<%= @pic.source %>">
+
+  <br>
+
+
+  <a href= "/photos">Go back</a> 
+
+   <br>
+
+  <a href= "/photos/<%= @pic.id %>/edit">Edit</a>
+  <br>
+  
+  <a href= "/delete_photo/<%= @pic.id %>">Delete</a>
+
+ 

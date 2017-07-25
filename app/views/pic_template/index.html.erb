@@ -18,14 +18,16 @@
 
  <a href= "/photos/<%= the_photo.id %>"> Details  </a>
 
-  <br/>
+ 
 
-  <button>Edit</button>
-  <br/>
+   <br>
 
-  <button>Delete</button>
-  <br/>
-    
+  <a href= "/photos/<%= the_photo.id %>/edit">Edit</a>
+  <br>
+  
+  <a href= "/delete_photo/<%= the_photo.id %>">Delete</a>
+  <br>
+  
   <% end %>
 </ul>
 

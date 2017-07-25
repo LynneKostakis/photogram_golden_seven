@@ -25,8 +25,8 @@ class PicturesController < ApplicationController
   def create_row
       
       p = Photo.new
-      p.source = params["the source"]
-      p.caption = params["the caption"]
+      p.source = params["the_source"]
+      p.caption = params["the_caption"]
       p.save
       
       render("pic_template/create_row_template.html.erb")
@@ -34,10 +34,10 @@ class PicturesController < ApplicationController
   
   def index
       @photos = Photo.all
-      p = Photo.new
-      p.id = params["the id"]
-      p.source = params["the source"]
-      p.save
+      # p = Photo.new
+      # p.id = params["the_id"]
+      # p.source = params["the_source"]
+      # p.save
       
      
      render("pic_template/index.html.erb")

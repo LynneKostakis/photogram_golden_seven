@@ -1,6 +1,6 @@
-<h1> Edit Photo <%= @pic.source%></h1>
+<h1> Edit Photo <%= @pic.id%></h1>
 
-<form action="/update_row">
+<form action="/update_photo/<%=@pic.id%>">
     <div>
     <b>
      <label for="image_url">
@@ -9,7 +9,7 @@
      
        
     
-    <input type= "text" name= "image_url" id="image_url"placeholder= "p.source">
+    <input type= "text" name= "image_url" id="image_url" value= "<%= @pic.source%>">
         
     <br/>
     
@@ -19,7 +19,7 @@
      
        
     
-    <input type= "text" name= "caption" id="caption"placeholder= "p.caption">
+    <input type= "text" name= "caption" id="caption" value = "<%=@pic.caption%>">
         
     <br/>
     </b>

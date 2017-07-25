@@ -34,29 +34,28 @@ class PicturesController < ApplicationController
   
   def index
       @photos = Photo.all
-      # p = Photo.new
-      # p.id = params["the_id"]
-      # p.source = params["the_source"]
-      # p.save
-      
+ 
      
      render("pic_template/index.html.erb")
   end   
   
   def edit_form
+    
     @pic = Photo.find(params[:an_id])
-    p = Photo.new
-    p.source = params["the source"]
-    p.caption = params["the caption"]
-    p.save
+ 
       
     render("pic_template/edit_form_template.html.erb")
 
   end 
   
   def update_row
+    p = Photo.find(params[:some_id])
+    p.source = params["image_url"]
+    p.caption = params["caption"]
+    p.save
       
-      redirect_to("/photos/:an_id")
+      
+      redirect_to("/photos/" + params[:some_id])
   end 
   
   def show

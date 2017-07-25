@@ -67,7 +67,9 @@ class PicturesController < ApplicationController
   end  
  
   def destroy_row  
-      
+    p = Photo.find(params[:toast_id]) 
+    p.destroy
+    
     redirect_to("/photos") 
   end
 end

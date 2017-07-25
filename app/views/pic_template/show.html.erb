@@ -1,0 +1,24 @@
+<h1> Photo Details</h1>
+
+<img src= "<%= @pic.source %>">
+
+<p>
+    
+    <%@pic.caption %>
+</p>
+
+ <br>
+  <form action="/photos">
+  <type = submit> 
+  <button><a href= "https://photogram-lynnekostakis.c9users.io/photos"></a> Go back</button>
+  </form>
+  
+  <form action="/photos/edit_form">
+  <type = submit> 
+  <button><a href= "https://photogram-lynnekostakis.c9users.io/photos/:an_id"></a>Edit</button>
+  </form>
+  
+  <form action="/photos/destroy_row">
+  <type = submit> 
+  <button>Delete</button>
+  </form>

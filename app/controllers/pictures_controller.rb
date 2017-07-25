@@ -4,6 +4,7 @@ class PicturesController < ApplicationController
     p = Photo.new
     p.source = params["the_source"]
     p.caption = params["the_caption"]
+
     p.save
 
 

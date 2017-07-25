@@ -2,8 +2,8 @@ class PicturesController < ApplicationController
   def new_form
     
     p = Photo.new
-    p.source = params["the source"]
-    p.caption = params["the caption"]
+    p.source = params["the_source"]
+    p.caption = params["the_caption"]
     p.save
 
 
@@ -13,7 +13,10 @@ class PicturesController < ApplicationController
   end   
   
   def process_create
-    
+    p = Photo.new
+    p.source = params["the_source"]
+    p.caption = params["the_caption"]
+    p.save
 
     redirect_to("/photos")
   end 
